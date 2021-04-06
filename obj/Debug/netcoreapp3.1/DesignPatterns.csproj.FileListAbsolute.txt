@@ -1,0 +1,13 @@
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\bin\Debug\netcoreapp3.1\DesignPatterns.exe
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\bin\Debug\netcoreapp3.1\DesignPatterns.deps.json
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\bin\Debug\netcoreapp3.1\DesignPatterns.runtimeconfig.json
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\bin\Debug\netcoreapp3.1\DesignPatterns.runtimeconfig.dev.json
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\bin\Debug\netcoreapp3.1\DesignPatterns.dll
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\bin\Debug\netcoreapp3.1\DesignPatterns.pdb
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\obj\Debug\netcoreapp3.1\DesignPatterns.csprojAssemblyReference.cache
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\obj\Debug\netcoreapp3.1\DesignPatterns.csproj.CoreCompileInputs.cache
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\obj\Debug\netcoreapp3.1\DesignPatterns.AssemblyInfoInputs.cache
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\obj\Debug\netcoreapp3.1\DesignPatterns.AssemblyInfo.cs
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\obj\Debug\netcoreapp3.1\DesignPatterns.dll
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\obj\Debug\netcoreapp3.1\DesignPatterns.pdb
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\Design Pattern\DesignPatterns\obj\Debug\netcoreapp3.1\DesignPatterns.genruntimeconfig.cache

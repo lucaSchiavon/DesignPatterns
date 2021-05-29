@@ -6,6 +6,7 @@ namespace DesignPatterns.Patterns.CodeWithMosh.Behavioural.Memento
 {
     public class EditorState
     {
+
         public Button Button { get; }
       
         public EditorState(Button button)

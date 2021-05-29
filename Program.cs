@@ -38,7 +38,7 @@ using Proxy = DesignPatterns.Patterns.CodeWithMosh.Structural.Proxy;
 using ProxyExercise=DesignPatterns.Patterns.CodeWithMosh.Structural.Proxy.Exercise;
     using FlyweightExercise = DesignPatterns.Patterns.CodeWithMosh.Structural.Flyweight.Exercise;
 using FlyweightExerciseSolution = DesignPatterns.Patterns.CodeWithMosh.Structural.Flyweight.Exercise.Solution;
-
+using DesignPatterns.Patterns.CodeWithMosh.Behavioural.State.ClockExample;
 
 namespace DesignPatterns
 {
@@ -93,6 +93,10 @@ namespace DesignPatterns
             //    Builder b1 = new ConcreteBuilder1();
             //    Builder b2 = new ConcreteBuilder2();
 
+          
+               
+
+
             //    // Construct two products
 
             //    director.Construct(b1);
@@ -103,6 +107,11 @@ namespace DesignPatterns
             //    Product pr2 = b2.GetResult();
             //    pr2.Show();
 
+            //animal builder
+            Animal anm = AnimalBuilder.NewBuilder("1")
+                .Name("elefante")
+                .PedigreeName("abc")
+                 .Owner("Carlo").Build();
 
             // Wait for user
 
@@ -269,18 +278,18 @@ namespace DesignPatterns
 
             //var Document = new ExercizeWithMosh.Document();
             //var History2 = new ExercizeWithMosh.History();
-            //Document.SetRecord(new List<string>() {  "content1","fontname1","fontsize1"  });
+            //Document.SetRecord(new List<string>() { "content1", "fontname1", "fontsize1" });
             //History2.Push(Document.CreateState());
             //Document.SetRecord(new List<string>() { "content2", "fontname2", "fontsize2" });
             //History2.Push(Document.CreateState());
-            // History2.Pop();
+            //History2.Pop();
             //ExercizeWithMosh.DocumentState DcoumentState = History2.Pop();
             //Document.Restore(DcoumentState);
 
             //Console.WriteLine(Document.GetRecord()[0]);
 
 
-            //state pattern
+            ////state pattern
             //Canvas canvas = new Canvas(new BrushTool());
             //canvas.mouseDown();
             //Canvas canvas2 = new Canvas(new SelectionTool());
@@ -291,10 +300,22 @@ namespace DesignPatterns
             //object dirTransit = DirectionService.getDirection();
             //object etaTransit = DirectionService.getEta();
 
-            //object dirTransit2= DirectionService2.getDirection();
+            //object dirTransit2 = DirectionService2.getDirection();
             //object etaTransit2 = DirectionService2.getEta();
 
-            ////iterator pattern
+            //clockstate
+            //l'orologio cliccando sul bottone mode permette ora di accendere la luce
+            //ora di settare i minuti
+            //ora le ore
+            Clock clock = new Clock();
+            clock.ChangeButton();
+            clock.ModeButton();
+            clock.ChangeButton();
+            clock.ModeButton();
+            clock.ChangeButton();
+            clock.SetState(new NormalDisplayState(clock));
+           
+            //iterator pattern
             //var BrowseHistory = new Iterator.BrowseHistory();
             //BrowseHistory.Push("a");
             //BrowseHistory.Push("b");
@@ -309,7 +330,7 @@ namespace DesignPatterns
 
 
             //IteratorExercise.ProductCollection ProductCollection = new IteratorExercise.ProductCollection();
-            //ProductCollection.Add(new IteratorExercise.Product(1,"a"));
+            //ProductCollection.Add(new IteratorExercise.Product(1, "a"));
             //ProductCollection.Add(new IteratorExercise.Product(2, "b"));
             //Iterator.IIterator<IteratorExercise.Product> Iterator2 = ProductCollection.CreateIterator();
             //while (Iterator2.HasNext())

@@ -39,6 +39,8 @@ using ProxyExercise=DesignPatterns.Patterns.CodeWithMosh.Structural.Proxy.Exerci
     using FlyweightExercise = DesignPatterns.Patterns.CodeWithMosh.Structural.Flyweight.Exercise;
 using FlyweightExerciseSolution = DesignPatterns.Patterns.CodeWithMosh.Structural.Flyweight.Exercise.Solution;
 using DesignPatterns.Patterns.CodeWithMosh.Behavioural.State.ClockExample;
+using DesignPatterns.General;
+using DesignPatterns.Libro.Creational.Prototype;
 
 namespace DesignPatterns
 {
@@ -81,6 +83,37 @@ namespace DesignPatterns
             //ConcretePrototype2 c2 = (ConcretePrototype2)p2.Clone();
             //Console.WriteLine("Cloned: {0}", c2.Id);
 
+            //prototype3
+            //Developer dev = new Developer();
+            //dev.Name = "Rahul";
+            //dev.Role = "Team Leader";
+            //dev.PreferredLanguage = "C#";
+
+            //Developer devCopy = (Developer)dev.Clone();
+            //devCopy.Name = "Arif"; //Not mention Role and PreferredLanguage, it will copy above
+
+            //Console.WriteLine(dev.GetDetails());
+            //Console.WriteLine(devCopy.GetDetails());
+
+            //Typist typist = new Typist();
+            //typist.Name = "Monu";
+            //typist.Role = "Typist";
+            //typist.WordsPerMinute = 120;
+            //Typist sub = new Typist();
+            //sub.Name = "Meo";
+            //sub.Role = "Typist";
+            //sub.WordsPerMinute = 130;
+            //typist.Substitute = sub;
+
+            ////make a deep copy of typist
+            //Typist typistCopy = (Typist)typist.Clone();
+            //typistCopy.Substitute = null;
+            //typistCopy.Name = "Sahil";
+            //typistCopy.WordsPerMinute = 115;//Not mention Role, it will copy above
+
+            //Console.WriteLine(typist.GetDetails());
+            //Console.WriteLine(typistCopy.GetDetails());
+
 
             ////*********************************************************
             ////Builder
@@ -93,8 +126,8 @@ namespace DesignPatterns
             //    Builder b1 = new ConcreteBuilder1();
             //    Builder b2 = new ConcreteBuilder2();
 
-          
-               
+
+
 
 
             //    // Construct two products
@@ -108,10 +141,10 @@ namespace DesignPatterns
             //    pr2.Show();
 
             //animal builder
-            Animal anm = AnimalBuilder.NewBuilder("1")
-                .Name("elefante")
-                .PedigreeName("abc")
-                 .Owner("Carlo").Build();
+            //Animal anm = AnimalBuilder.NewBuilder("1")
+            //    .Name("elefante")
+            //    .PedigreeName("abc")
+            //     .Owner("Carlo").Build();
 
             // Wait for user
 
@@ -307,14 +340,14 @@ namespace DesignPatterns
             //l'orologio cliccando sul bottone mode permette ora di accendere la luce
             //ora di settare i minuti
             //ora le ore
-            Clock clock = new Clock();
-            clock.ChangeButton();
-            clock.ModeButton();
-            clock.ChangeButton();
-            clock.ModeButton();
-            clock.ChangeButton();
-            clock.SetState(new NormalDisplayState(clock));
-           
+            //Clock clock = new Clock();
+            //clock.ChangeButton();
+            //clock.ModeButton();
+            //clock.ChangeButton();
+            //clock.ModeButton();
+            //clock.ChangeButton();
+            //clock.SetState(new NormalDisplayState(clock));
+
             //iterator pattern
             //var BrowseHistory = new Iterator.BrowseHistory();
             //BrowseHistory.Push("a");
@@ -376,7 +409,7 @@ namespace DesignPatterns
 
 
             //Composite command
-            //CompositeCommand.CompositeComand compComm= new CompositeCommand.CompositeComand();
+            //CompositeCommand.CompositeComand compComm = new CompositeCommand.CompositeComand();
             //CompositeCommand.BlackAndWhiteComand bwc = new CompositeCommand.BlackAndWhiteComand();
             //CompositeCommand.ResizeComand rc = new CompositeCommand.ResizeComand();
             //compComm.Add(bwc);
@@ -431,13 +464,13 @@ namespace DesignPatterns
 
 
             //Visitor
-            var document = new Visitor.HtmlDocument();
-            document.add(new Visitor.HeadingNode());
-            document.add(new Visitor.AnchorNode());
-            Visitor.HighlightOperation highlightOperation = new Visitor.HighlightOperation();
-            Visitor.ExtractTextOperation ExtractTextOperation = new Visitor.ExtractTextOperation();
-            document.Execute(highlightOperation);
-            document.Execute(ExtractTextOperation);
+            //var document = new Visitor.HtmlDocument();
+            //document.add(new Visitor.HeadingNode());
+            //document.add(new Visitor.AnchorNode());
+            //Visitor.HighlightOperation highlightOperation = new Visitor.HighlightOperation();
+            //Visitor.ExtractTextOperation ExtractTextOperation = new Visitor.ExtractTextOperation();
+            //document.Execute(highlightOperation);
+            //document.Execute(ExtractTextOperation);
 
 
 
@@ -462,20 +495,20 @@ namespace DesignPatterns
 
 
             //solution
-            //Composite.Solution.Group groupSol1 = new Composite.Solution.Group();
-            //groupSol1.Add(new Composite.Solution.Shape());
-            //groupSol1.Add(new Composite.Solution.Shape());
+            Composite.Solution.Group groupSol1 = new Composite.Solution.Group();
+            groupSol1.Add(new Composite.Solution.Shape());
+            groupSol1.Add(new Composite.Solution.Shape());
 
-            //Composite.Solution.Group groupSol2 = new Composite.Solution.Group();
-            //groupSol2.Add(new Composite.Solution.Shape());
-            //groupSol2.Add(new Composite.Solution.Shape());
+            Composite.Solution.Group groupSol2 = new Composite.Solution.Group();
+            groupSol2.Add(new Composite.Solution.Shape());
+            groupSol2.Add(new Composite.Solution.Shape());
 
-            //Composite.Solution.Group groupSol = new Composite.Solution.Group();
-            //groupSol.Add(groupSol1);
-            //groupSol.Add(groupSol2);
+            Composite.Solution.Group groupSol = new Composite.Solution.Group();
+            groupSol.Add(groupSol1);
+            groupSol.Add(groupSol2);
 
-            //groupSol.Render();
-            //groupSol.Move();
+            groupSol.Render();
+            groupSol.Move();
 
             ////exercise
 
@@ -598,11 +631,86 @@ namespace DesignPatterns
             //ProxyExercise.Demo.show();
             #endregion
 
+
+            #region "General"
+
+            //// Create an instance of Person and assign values to its fields.
+            //Person p1 = new Person();
+            //p1.Age = 42;
+            //p1.Name = "Sam";
+            //p1.IdInfo = new IdInfo(6565);
+
+            //// Perform a shallow copy of p1 and assign it to p2.
+            //Person p2 = p1.ShallowCopy();
+
+            //// Display values of p1, p2
+            //Console.WriteLine("Original values of p1 and p2:");
+            //Console.WriteLine("   p1 instance values: ");
+            //DisplayValues(p1);
+            //Console.WriteLine("   p2 instance values:");
+            //DisplayValues(p2);
+
+            //// Change the value of p1 properties and display the values of p1 and p2.
+            //p1.Age = 32;
+            //p1.Name = "Frank";
+            //p1.IdInfo.IdNumber = 7878;
+            //Console.WriteLine("\nValues of p1 and p2 after changes to p1:");
+            //Console.WriteLine("   p1 instance values: ");
+            //DisplayValues(p1);
+            //Console.WriteLine("   p2 instance values:");
+            //DisplayValues(p2);
+
+            //// Make a deep copy of p1 and assign it to p3.
+            //Person p3 = p1.DeepCopy();
+            //// Change the members of the p1 class to new values to show the deep copy.
+            //p1.Name = "George";
+            //p1.Age = 39;
+            //p1.IdInfo.IdNumber = 8641;
+            //Console.WriteLine("\nValues of p1 and p3 after changes to p1:");
+            //Console.WriteLine("   p1 instance values: ");
+            //DisplayValues(p1);
+            //Console.WriteLine("   p3 instance values:");
+            //DisplayValues(p3);
+
+            SandwichMenu sandwichMenu = new SandwichMenu();
+
+            // Initialize with default sandwiches
+            sandwichMenu["BLT"]
+                = new Sandwich("Wheat", "Bacon", "", "Lettuce, Tomato");
+            sandwichMenu["PB&J"]
+                = new Sandwich("White", "", "", "Peanut Butter, Jelly");
+            sandwichMenu["Turkey"]
+                = new Sandwich("Rye", "Turkey", "Swiss", "Lettuce, Onion, Tomato");
+
+            // Deli manager adds custom sandwiches
+            sandwichMenu["LoadedBLT"]
+                = new Sandwich("Wheat", "Turkey, Bacon", "American", "Lettuce, Tomato, Onion, Olives");
+            sandwichMenu["ThreeMeatCombo"]
+                = new Sandwich("Rye", "Turkey, Ham, Salami", "Provolone", "Lettuce, Onion");
+            sandwichMenu["Vegetarian"]
+                = new Sandwich("Wheat", "", "", "Lettuce, Onion, Tomato, Olives, Spinach");
+
+            // Now we can clone these sandwiches
+            Sandwich sandwich1 = sandwichMenu["BLT"].Clone() as Sandwich;
+            Sandwich sandwich2
+                = sandwichMenu["ThreeMeatCombo"].Clone() as Sandwich;
+            Sandwich sandwich3
+                = sandwichMenu["Vegetarian"].Clone() as Sandwich;
+
+
+            #endregion
+
             Console.ReadKey();
         }
         private static void StoreCreditCard(DecoratorSolution.IStream stream)
         {
             stream.Write(data: "test");
+        }
+
+        public static void DisplayValues(Person p)
+        {
+            Console.WriteLine("      Name: {0:s}, Age: {1:d}", p.Name, p.Age);
+            Console.WriteLine("      Value: {0:d}", p.IdInfo.IdNumber);
         }
     }
 }
